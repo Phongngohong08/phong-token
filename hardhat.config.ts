@@ -8,6 +8,7 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 const sepoliaRpcUrl = process.env.SEPOLIA_RPC_URL;
 const walletPrivateKey = process.env.WALLET_PRIVATE_KEY;
+const besuPrivateKey = process.env.BESU_PRIVATE_KEY;
 
 const config: HardhatUserConfig = {
   plugins: [hardhatToolboxViemPlugin, hardhatVerify],
@@ -41,6 +42,12 @@ const config: HardhatUserConfig = {
       chainType: "l1",
       url: sepoliaRpcUrl || "",
       accounts: [walletPrivateKey || ""],
+    },
+    besu_private_net: {
+      type: "http",
+      chainType: "l1",
+      url: "http://127.0.0.1:8545",
+      accounts: [besuPrivateKey || ""]
     },
   },
   verify: {

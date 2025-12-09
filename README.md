@@ -16,8 +16,8 @@ npx hardhat test solidity
 npx hardhat test nodejs
 
 ## Deployment commands
-npx hardhat ignition deploy ignition/modules/PhongToken.ts
-npx hardhat ignition deploy --network sepolia ignition/modules/PhongToken.ts
+npx hardhat ignition deploy ignition/modules/ProToken.ts
+npx hardhat ignition deploy --network sepolia ignition/modules/ProToken.ts
 
 ## Verify commands
-npx hardhat verify --network sepolia 0x7772ee35E5B0d8EaE15460DCEf7BdC13ca1B311F
+npx hardhat verify --network sepolia 0x4e8b6c32dba1A5EA9b32D4C6388b93067C91c4b5
